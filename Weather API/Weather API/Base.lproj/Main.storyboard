@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather_API" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountain.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VIL-Hf-sqi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KV0-Io-O8e">
+                                <rect key="frame" x="128" y="203" width="118" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="ed9-mZ-h3c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="eg. Atlanta" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1DF-9v-JEW">
+                                <rect key="frame" x="16" y="266" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayM-Bi-PfP">
+                                <rect key="frame" x="16" y="356" width="343" height="134"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qf-NP-S2R">
+                                <rect key="frame" x="140" y="318" width="94" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="Sqa-ts-XHO"/>
+                                    <constraint firstAttribute="height" constant="30" id="ldR-do-8cE"/>
+                                </constraints>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oro-zj-Woe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your weather?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9y-5f-sbd">
+                                <rect key="frame" x="16" y="52" width="343" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="iZC-5b-dpL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1DF-9v-JEW" firstAttribute="centerX" secondItem="3qf-NP-S2R" secondAttribute="centerX" id="4me-xI-kBZ"/>
+                            <constraint firstItem="1DF-9v-JEW" firstAttribute="trailing" secondItem="ayM-Bi-PfP" secondAttribute="trailing" id="7XG-ha-zHx"/>
+                            <constraint firstItem="1DF-9v-JEW" firstAttribute="top" secondItem="KV0-Io-O8e" secondAttribute="bottom" constant="42" id="8g5-dV-PDU"/>
+                            <constraint firstItem="C9y-5f-sbd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="ITB-OT-3nU"/>
+                            <constraint firstAttribute="trailing" secondItem="VIL-Hf-sqi" secondAttribute="trailing" id="M0w-Wd-Ckv"/>
+                            <constraint firstItem="KV0-Io-O8e" firstAttribute="centerX" secondItem="1DF-9v-JEW" secondAttribute="centerX" id="PMC-ny-WDg"/>
+                            <constraint firstItem="VIL-Hf-sqi" firstAttribute="centerY" secondItem="3qf-NP-S2R" secondAttribute="centerY" id="PgQ-8O-AGP"/>
+                            <constraint firstItem="C9y-5f-sbd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Qxo-r7-On0"/>
+                            <constraint firstItem="1DF-9v-JEW" firstAttribute="leading" secondItem="ayM-Bi-PfP" secondAttribute="leading" id="jDZ-By-e0O"/>
+                            <constraint firstItem="ayM-Bi-PfP" firstAttribute="top" secondItem="3qf-NP-S2R" secondAttribute="bottom" constant="8" symbolic="YES" id="jk5-8A-Hld"/>
+                            <constraint firstItem="C9y-5f-sbd" firstAttribute="leading" secondItem="1DF-9v-JEW" secondAttribute="leading" id="jpa-ML-BoI"/>
+                            <constraint firstItem="VIL-Hf-sqi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oLd-VI-dgH"/>
+                            <constraint firstItem="3qf-NP-S2R" firstAttribute="top" secondItem="1DF-9v-JEW" secondAttribute="bottom" constant="22" id="plX-2N-tHR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ayM-Bi-PfP" secondAttribute="bottom" constant="177" id="qfE-Hk-aX7"/>
+                            <constraint firstItem="VIL-Hf-sqi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="s9l-C1-ynP"/>
+                            <constraint firstItem="VIL-Hf-sqi" firstAttribute="centerX" secondItem="KV0-Io-O8e" secondAttribute="centerX" id="tWP-na-Vbr"/>
+                            <constraint firstItem="C9y-5f-sbd" firstAttribute="trailing" secondItem="1DF-9v-JEW" secondAttribute="trailing" id="vt0-9v-TxV"/>
+                            <constraint firstItem="VIL-Hf-sqi" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="xmZ-YO-gvr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="ayM-Bi-PfP" id="6s4-Oe-gjR"/>
+                        <outlet property="textLabel" destination="1DF-9v-JEW" id="lBG-Vn-sDH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="111.99400299850076"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mountain.jpg" width="5184" height="3456"/>
+    </resources>
+</document>
